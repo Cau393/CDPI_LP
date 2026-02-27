@@ -3,13 +3,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 24px 0 32px;
+  padding: 100px 0 120px;
   position: relative;
   z-index: 5;
 }
 
 .registration-page .page-logo .logo-img {
-  height: 100px;
+  height: 250px;
   width: auto;
   max-width: 90%;
   object-fit: contain;
@@ -138,10 +138,10 @@
 
 @media (max-width: 480px) {
   .registration-page .page-logo {
-    padding: 16px 0 24px;
+    padding: 100px 0 120px;
   }
 
   .registration-page .page-logo .logo-img {
-    height: 80px;
+    height: 120px;
   }
 }

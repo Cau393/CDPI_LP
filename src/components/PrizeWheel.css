@@ -1,39 +1,26 @@
-.wheel-container { 
-  width: 100%; 
-  max-width: 400px; /* Adjust size as needed */
-  max-height: 400px;
-  aspect-ratio: 1 / 1; 
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
 .wheel-segment {
   position: absolute;
   top: 0;
   left: 50%;
   width: 0;
-  height: 50%; /* Reaches from center to top edge */
-  transform-origin: bottom center; /* Pivot point is the center of wheel */
+  height: 50%; 
+  transform-origin: bottom center; 
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align text to the top (outer edge) */
-  padding-top: 25px; /* Spacing from the rim */
+  /* FIX 1: Change to center so text anchors exactly halfway down the radius */
+  align-items: center; 
+  /* FIX 2: Remove padding-top so it doesn't offset the exact center calculation */
+  padding-top: 0; 
   z-index: 2;
 }
 
 .segment-text {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  /* Rotate text to read vertically from outside in */
-  writing-mode: vertical-rl; 
-  transform: rotate(180deg); 
-  white-space: nowrap;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  /* FIX 3: Increased width slightly to prevent severe squishing of longer words */
+  width: 90px; 
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .wheel-border-ring {

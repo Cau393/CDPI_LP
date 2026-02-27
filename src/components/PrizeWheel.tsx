@@ -28,19 +28,30 @@ export default function PrizeWheel({ rotation, segments }: Readonly<PrizeWheelPr
           background: `conic-gradient(${gradientString})`,
         }}
       >
-        {segments.map((segment, index) => (
-          <div
-            key={index}
-            className="wheel-segment"
-            style={{
-              transform: `rotate(${index * segmentAngle + offset}deg)`,
-            }}
-          >
-            <span className="segment-text" style={{ color: segment.textColor }}>
-              {segment.label}
-            </span>
-          </div>
-        ))}
+        {segments.map((segment, index) => {
+          const angle = index * segmentAngle + offset
+
+          return (
+            <div
+              key={index}
+              className="wheel-segment"
+              style={{
+                transform: `rotate(${angle}deg)`,
+              }}
+            >
+              <span
+                className="segment-text"
+                style={{
+                  color: segment.textColor,
+                  /* FIX: Just counter-rotate to keep upright. Removed translateY! */
+                  transform: `rotate(-${angle}deg)`,
+                }}
+              >
+                {segment.label}
+              </span>
+            </div>
+          )
+        })}
         <div className="wheel-center" />
       </div>
       <div className="wheel-border-ring" />

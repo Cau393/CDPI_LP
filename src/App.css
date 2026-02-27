@@ -23,10 +23,11 @@
 }
 
 .logo {
-  height: 80px; 
+  height: 40px; 
   width: auto;
   object-fit: contain;
   display: block;
+  padding: 10px 0 20px;
 }
 
 .main-content {
@@ -115,11 +116,11 @@
 
 @media (max-width: 480px) {
   .logo {
-    height: 55px;
+    height: 45px;
   }
   
   .header {
-    padding: 10px 0; 
+    padding: 0px 0 20px; 
   }
 
   .page-container {

@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 24px 0 20px;
+  padding: 40px 0 30px; /* ↑ more breathing room */
   position: relative;
   z-index: 5;
 }
@@ -18,12 +18,12 @@
 
 .wheel-container {
   position: relative;
-  width: 320px; /* Control the size here */
-  height: 320px;
+  width: 340px;   /* slightly bigger like design */
+  height: 340px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 40px auto 50px; /* ↑ push wheel down + space before button */
 }
 
 .wheel-wrapper {
@@ -32,12 +32,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* more space under wheel */
   overflow: visible;
 }
 
 .spin-button {
-  padding: 14px 64px;
+  padding: 16px 72px; /* slightly larger like mockup */
   background: linear-gradient(135deg, #0088ff, #0066cc);
   color: #ffffff;
   border: none;
@@ -49,6 +49,7 @@
   box-shadow: 0 10px 20px rgba(0, 102, 204, 0.35);
   position: relative;
   z-index: 50;
+  margin-bottom: 80px; /* important for visual balance */
 }
 
 .spin-button:disabled {
@@ -65,7 +66,7 @@
 .result-text {
   color: #0b4b8a;
   font-size: 18px;
-  margin: 0;
+  margin-top: 10px; /* small separation from button */
 }
 
 .result-text strong {
@@ -75,16 +76,14 @@
 
 @media (max-width: 640px) {
   .page-logo {
-    padding: 16px 0 12px;
+    padding: 30px 0 20px;
   }
 
   .page-logo .logo-img {
-    height: 80px;
+    height: 100px;
   }
 
-  /* Optional: Ensure wheel has space */
   .wheel-container {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin: 100px auto 90px;
   }
 }
