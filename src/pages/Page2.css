@@ -1,0 +1,90 @@
+.page-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.page-logo .logo-img {
+  height: 100px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.wheel-container {
+  position: relative;
+  width: 320px; /* Control the size here */
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.wheel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+.spin-button {
+  padding: 14px 64px;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 102, 204, 0.35);
+  position: relative;
+  z-index: 50;
+}
+
+.spin-button:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.spin-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(0, 102, 204, 0.4);
+}
+
+.result-text {
+  color: #0b4b8a;
+  font-size: 18px;
+  margin: 0;
+}
+
+.result-text strong {
+  color: #0088ff;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .page-logo {
+    padding: 16px 0 12px;
+  }
+
+  .page-logo .logo-img {
+    height: 80px;
+  }
+
+  /* Optional: Ensure wheel has space */
+  .wheel-container {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}

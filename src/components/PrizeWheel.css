@@ -1,0 +1,137 @@
+.wheel-container { 
+  width: 100%; 
+  max-width: 400px; /* Adjust size as needed */
+  max-height: 400px;
+  aspect-ratio: 1 / 1; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.wheel-segment {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 50%; /* Reaches from center to top edge */
+  transform-origin: bottom center; /* Pivot point is the center of wheel */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the top (outer edge) */
+  padding-top: 25px; /* Spacing from the rim */
+  z-index: 2;
+}
+
+.segment-text {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Rotate text to read vertically from outside in */
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg); 
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.wheel-border-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #001f3f; /* Dark Blue */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* --- FIX 1: MARKER POSITION --- */
+.marker-container {
+  position: absolute;
+  /* CONTROL POSITION HERE: Change 'top' to move the marker up/down. 
+     -20px moves it up, 50px moves it down, etc. */
+  top: -50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  
+  /* Ensure this container has no size that interferes */
+  width: auto;
+  height: auto;
+}
+
+.wheel-marker {
+  position: absolute;
+  top: -15px;
+  z-index: 20;
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #ffcc00; /* Gold Color */
+  filter: drop-shadow(0 4px 2px rgba(0,0,0,0.3));
+}
+
+/* --- FIX 2: WHEEL ROTATION & CENTERING --- */
+.wheel-image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  
+  /* FORCE THE PIVOT POINT: This ensures it spins around its exact center */
+  transform-origin: center center;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 5s cubic-bezier(0.2, 0, 0.2, 1); /* Smooth spin deceleration */
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  border: 4px solid white; /* Inner white trim */
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #d1d1d1);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .prize-wheel-wrapper {
+    width: 460px;
+    height: 460px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .wheel-marker {
+    width: 20px; /* Adjusted size for mobile */
+    height: auto;
+  }
+  
+  /* Adjust marker position for mobile if needed */
+  .marker-container {
+    top: -50px; 
+  }
+
+  .wheel-image {
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%) !important;
+  }
+}

@@ -1,0 +1,150 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  background-image: url('/bg-pattern.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  color: #0b4b8a;
+}
+
+.header {
+  background-color: rgb(8, 31, 129);
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the logo horizontally */
+  align-items: center;
+  padding: 10px 0; /* Vertical spacing inside the blue bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.logo {
+  height: 80px; 
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding: 0px 10px 10px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  background: #ffffff;
+  color: #0b4b8a;
+  border-radius: 28px;
+  padding: 30px 28px 34px;
+  box-shadow: 0 18px 50px rgba(10, 34, 68, 0.25);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #0b4b8a;
+}
+
+.footer {
+  width: 100%;
+  background: #0a4fa3;
+  padding: 20px 16px 26px;
+  color: #dce8f7;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #dce8f7;
+  color: #dce8f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.footer-text {
+  max-width: 420px;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 55px;
+  }
+  
+  .header {
+    padding: 10px 0; 
+  }
+
+  .page-container {
+    background-image: url('/bg-pattern.jpg') !important;
+    background-size: 100% auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .card {
+    padding: 26px 20px 30px;
+  }
+
+  .footer-content {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 641px) {
+  .page-container {
+    background-image: url('/BG-CARNAVAL2-2.jpg') !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: fixed !important;
+  }
+}

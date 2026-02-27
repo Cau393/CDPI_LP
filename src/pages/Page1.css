@@ -1,0 +1,147 @@
+.registration-page .page-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0 32px;
+  position: relative;
+  z-index: 5;
+}
+
+.registration-page .page-logo .logo-img {
+  height: 100px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.registration-page .form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.registration-page .input-field {
+  border: none;
+  background: #f1f1f1;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-size: 16px;
+  color: #0b4b8a;
+  outline: none;
+}
+
+.registration-page .input-field::placeholder {
+  color: #7b8ea6;
+}
+
+.registration-page .submit-button {
+  margin-top: 8px;
+  align-self: center;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  border: none;
+  color: #ffffff;
+  padding: 12px 46px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 102, 204, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-page .submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.registration-page .submit-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 102, 204, 0.35);
+}
+
+.radio-group-container {
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-label {
+  font-size: 16px;
+  color: #0b4b8a;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.radio-label:hover {
+  background-color: rgba(11, 75, 138, 0.05);
+}
+
+.radio-input {
+  width: 20px;
+  height: 20px;
+  accent-color: #0088ff; /* Matches your theme blue */
+  cursor: pointer;
+}
+
+.radio-text {
+  font-size: 15px;
+  color: #333;
+}
+
+.form-error {
+  font-size: 13px;
+  color: #c00;
+  margin-top: -8px;
+}
+
+.cta-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(11, 75, 138, 0.2);
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 18px;
+  color: #0b4b8a;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cta-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .registration-page .page-logo {
+    padding: 16px 0 24px;
+  }
+
+  .registration-page .page-logo .logo-img {
+    height: 80px;
+  }
+}

@@ -1,0 +1,83 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 8px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 26px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.modal-logo {
+  height: 80px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.modal-body {
+  margin: 20px 20px 20px 20px;
+}
+
+.modal-title {
+  /* Changed: Reduced margin to bring "Você ganhou" closer to the prize */
+  margin: 10px 0px 5px 0px;
+  color: #0b4b8a;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.modal-prize {
+  margin-top: 30px;
+  color: #0088ff;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.modal-close-button {
+  width: calc(100% - 48px);
+  /* Changed: Reduced margins to pull button closer to the text above */
+  margin: 40px 40px 40px;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-close-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 102, 204, 0.35);
+}
