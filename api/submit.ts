@@ -4,6 +4,10 @@ import dotenv from 'dotenv'
 
 dotenv.config({ path: '.env.local' })
 
+console.log(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL)
+console.log(process.env.GOOGLE_PRIVATE_KEY)
+console.log(process.env.GOOGLE_SHEET_ID)
+
 type SubmitRequest = {
   method?: string
   body: {
