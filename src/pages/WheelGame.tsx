@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react'
 import PrizeWheel from '../components/PrizeWheel.tsx'
 import PrizeModal from '../components/PrizeModal.tsx'
 import type { Prize } from '../data/prizes'
-import { WHEEL_SEGMENTS, PRIZE_LABEL_TO_INDEX } from '../data/prizes'
+import {
+  WHEEL_SEGMENTS,
+  PRIZE_LABEL_TO_INDEX,
+  PRIZE_LABEL_TO_SEGMENT_INDICES,
+} from '../data/prizes'
 import './Page2.css'
 
 const SPIN_STORAGE_KEY = 'wheel_has_spun'
@@ -39,7 +43,8 @@ export default function WheelGame({ onPrizeWon }: WheelGameProps) {
   }, [])
 
   const calculateRotation = (prizeLabel: string): number => {
-    const winningIndex = PRIZE_LABEL_TO_INDEX[prizeLabel] ?? 0
+    const indices = PRIZE_LABEL_TO_SEGMENT_INDICES[prizeLabel] ?? [0, 4]
+    const winningIndex = indices[Math.floor(Math.random() * 2)]
     const segmentAngle = 360 / WHEEL_SEGMENTS.length
     const offset = segmentAngle / 2
     return 360 * 5 + (360 - (winningIndex * segmentAngle + offset))

@@ -15,12 +15,11 @@
 }
 
 .segment-text {
-  /* FIX 3: Increased width slightly to prevent severe squishing of longer words */
-  width: 90px; 
+  width: 120px;
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .wheel-border-ring {

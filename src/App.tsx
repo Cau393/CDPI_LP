@@ -56,7 +56,7 @@ export default function App() {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '5562981624758'
-    const message = `Olá, meu código é ${prizeData.code}. Gostaria de saber mais informações sobre o Folia Pharma do CDPI e retirar meu prêmio!.`
+    const message = `Olá, meu código é ${prizeData.code}. Gostaria de saber mais informações sobre a roleta premiada do CDPI e retirar meu prêmio!.`
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
